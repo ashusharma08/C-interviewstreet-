@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+long sort(long *,int);
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int N,K,i,j,count=0;
+    long *a;
+    scanf("%d%d",&N,&K);
+    a=(long *)malloc(N*sizeof(int));
+    for(i=0;i<N;i++)
+    {
+        scanf("%ld",&a[i]);
+    }
+    sort(a,N);
+    for(i=0;i<N;i++)
+    {
+        for(j=i+1;j<=N;j++)
+        {
+            if ((a[i]-a[j])== abs(K))
+            {count++;
+             break;}
+        }
+    }
+long sort(long *,int)
+    {
+        long temp;
+        int i,j;
+            for(i=0;i<N;i++)
+            {
+                for(j=i+1;j<N;j++)
+                {
+                    if(a[i]>a[j]
+                       {a[i]=temp;
+                        a[j]=a[i];
+                        temp=a[j];
+                       }
+                }
+             }
+      }
+ return 0;
+}
+
